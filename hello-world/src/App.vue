@@ -1,5 +1,6 @@
 <template>
-<h1 v-bind:id="id">Hello {{ name }}</h1>
+<h1 v-bind:class="isHeading ? 'heading' : 'text'">Hello {{ name }}</h1>
+
 </template>
 
 <script>
@@ -9,7 +10,8 @@ export default {
   data() {
     return {
       name: 'Nadir Bakhsh',
-      id: 'heading'
+      id: 'heading',
+      isHeading: true
     }
   },
 }
@@ -25,7 +27,13 @@ export default {
   margin-top: 60px;
 }
 
-#heading {
+.heading {
   font-size: 4rem;
+  color: red;
+}
+
+.text {
+  font-size: 1rem;
+  color: blue;
 }
 </style>
