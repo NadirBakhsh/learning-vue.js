@@ -1,5 +1,5 @@
 <template>
-<h1>Hello {{ name }}</h1>
+<h1 v-bind:id="id">Hello {{ name }}</h1>
 </template>
 
 <script>
@@ -8,7 +8,8 @@ export default {
   name: 'App',
   data() {
     return {
-      name: 'Nadir Bakhsh'
+      name: 'Nadir Bakhsh',
+      id: 'heading'
     }
   },
 }
@@ -22,5 +23,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#heading {
+  font-size: 4rem;
 }
 </style>
